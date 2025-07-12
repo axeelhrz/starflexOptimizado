@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="no-js">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
     <!-- SEO Optimizado -->
     <title data-translate="page-title">StarFlex - Automatiza tus Bloques de Amazon Flex | Prueba Gratis</title>
@@ -10,9 +11,8 @@
     <meta name="keywords" content="Amazon Flex, automatización bloques, ganancias delivery, optimizar horarios, conductor profesional, Starflex">
     <meta name="author" content="Starflex">
     <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#FF0000">
+    <meta name="theme-color" content="#FF2D55">
     <link rel="canonical" href="https://starflexapp.com">
-
     
     <!-- Open Graph -->
     <meta property="og:title" data-translate="og-title" content="Starflex - La Revolución de Amazon Flex">
@@ -24,25 +24,35 @@
     <!-- Favicon optimizado -->
     <link rel="icon" type="image/png" href="./assets/icon.png">
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/icon.png">
-    
-    <!-- Preload de recursos críticos optimizado para móvil -->
-    <link rel="preload" href="./assets/phones/Hero.mp4" as="video" type="video/mp4">
-    <link rel="preload" href="./assets/logo.avif" as="image" type="image/avif">
-    
-    <!-- Fuentes Google optimizadas para móvil -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- CSS UNIFICADO - SOLO STYLE.CSS -->
-    <link rel="stylesheet" href="src/css/main.css">
     
     <!-- Optimización para dispositivos móviles -->
-    <meta name="theme-color" content="#FF2D55">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="format-detection" content="telephone=no">
+    
+    <!-- Precargas críticas optimizadas -->
+    <link rel="preload" href="./assets/logo.avif" as="image" type="image/avif" fetchpriority="high">
+    <link rel="preload" href="src/css/main.css" as="style">
+    <link rel="preload" href="src/js/mobile-visibility-fix.js" as="script">
+    <link rel="preload" href="src/js/app.js" as="script">
+    
+    <!-- DNS Prefetch para recursos externos -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Fuentes Google optimizadas para móvil con display swap -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;700&family=Sora:wght@400;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;700&family=Sora:wght@400;600&display=swap" rel="stylesheet">
+    </noscript>
+    
+    <!-- CSS UNIFICADO -->
+    <link rel="stylesheet" href="src/css/main.css">
+    
+    <!-- Script de detección de JS -->
+    <script>document.documentElement.classList.remove('no-js');</script>
 </head>
 
 <body>
@@ -222,7 +232,7 @@
         </div>
     </header>
 
-    <!-- Hero Section - COMPLETAMENTE LIBRE DE RESTRICCIONES -->
+    <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero__container">
             <div class="hero__content">
@@ -247,7 +257,7 @@
                     La plataforma más avanzada para conductores profesionales del futuro.
                 </p>
                 
-                <!-- GRUPO CTA COMPLETAMENTE LIBRE - SIN RESTRICCIONES -->
+                <!-- GRUPO CTA -->
                 <div class="hero__cta-group">
                     <a href="https://starflex.web.app/" class="btn btn--primary btn--cta" aria-label="Comenzar prueba gratuita de 3 días">
                         <div class="hero__cta-main">
@@ -279,8 +289,9 @@
                             muted 
                             loop 
                             playsinline
-                            preload="auto"
+                            preload="none"
                             aria-label="Video demostrativo de StarFlex en dispositivo móvil"
+                            loading="lazy"
                         >
                             <source src="./assets/phones/Hero.mp4" type="video/mp4">
                         </video>
@@ -302,8 +313,9 @@
                                     muted 
                                     loop 
                                     playsinline
-                                    preload="auto"
+                                    preload="none"
                                     aria-label="Video demostrativo de StarFlex"
+                                    loading="lazy"
                                 >
                                     <source src="./assets/phones/Hero.mp4" type="video/mp4">
                                 </video>
@@ -317,7 +329,7 @@
         </div>
     </section>
 
-    <!-- Sección Características - SIN CONTENEDORES RESTRICTIVOS -->
+    <!-- Sección Características -->
     <section class="features" id="features">
         <div class="features__header">
             <h2 class="features__title" data-translate="features-title">Características</h2>
@@ -493,7 +505,7 @@
         </div>
     </section>
 
-    <!-- Sección de Videos - SIN CONTENEDORES RESTRICTIVOS -->
+    <!-- Sección de Videos -->
     <section class="videos" id="videos">
         <div class="videos__header">
             <div class="videos__badge">
@@ -525,10 +537,11 @@
                         <video 
                             class="videos__player" 
                             id="main-video"
-                            preload="metadata"
+                            preload="none"
                             playsinline
                             poster="./assets/video-poster.webp"
                             aria-label="Video demostrativo completo de StarFlex"
+                            loading="lazy"
                         >
                             <source src="./assets/StarFlex.mp4" type="video/mp4">
                             <p data-translate="video-not-supported">Tu navegador no soporta videos HTML5. <a href="./assets/StarFlex.mp4">Descargar video</a>.</p>
@@ -592,7 +605,7 @@
         </div>
     </section>
 
-    <!-- Sección FAQ - SIN CONTENEDORES RESTRICTIVOS -->
+    <!-- Sección FAQ -->
     <section class="faq" id="faq">
         <div class="faq__header">
             <h2 class="faq__title" data-translate="faq-title">Preguntas Frecuentes</h2>
@@ -700,7 +713,7 @@
         </div>
     </section>
 
-    <!-- Sección de Contacto - SIN CONTENEDORES RESTRICTIVOS -->
+    <!-- Sección de Contacto -->
     <section class="contact" id="contact">
         <div class="contact__bg-effects">
             <div class="contact__orb contact__orb--1"></div>
@@ -726,7 +739,7 @@
             </p>
         </div>
 
-        <!-- Grid de contactos completamente rediseñado -->
+        <!-- Grid de contactos -->
         <div class="contact__grid">
             <!-- Canal de WhatsApp -->
             <div class="contact__channel" data-channel="whatsapp">
@@ -888,9 +901,61 @@
         </div>
     </div>
 
-    <!-- JavaScript optimizado -->
-    <!-- IMPORTANTE: Cargar el script de corrección de visibilidad móvil PRIMERO -->
-    <script src="src/js/mobile-visibility-fix.js"></script>
-    <script src="src/js/app.js"></script>
+    <!-- Optimización de carga de scripts -->
+    <script>
+        // Detector de conexión lenta
+        function isSlowConnection() {
+            const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+            return connection && (connection.saveData || 
+                connection.effectiveType === 'slow-2g' || 
+                connection.effectiveType === '2g' || 
+                connection.effectiveType === '3g');
+        }
+        
+        // Detector de dispositivo de baja potencia
+        function isLowEndDevice() {
+            return navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 4 || 
+                  navigator.deviceMemory && navigator.deviceMemory <= 4;
+        }
+        
+        // Configuración de carga de scripts basada en capacidades del dispositivo
+        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth <= 1023;
+        const isLowPower = isLowEndDevice() || isSlowConnection();
+        
+        // Función para cargar scripts de manera óptima
+        function loadScript(src, async = true, defer = true) {
+            const script = document.createElement('script');
+            script.src = src;
+            script.async = async;
+            script.defer = defer;
+            document.body.appendChild(script);
+            return script;
+        }
+        
+        // Cargar scripts críticos inmediatamente
+        loadScript('src/js/mobile-visibility-fix.js');
+        
+        // Cargar script principal con estrategia basada en capacidades
+        if (isMobile && isLowPower) {
+            // En dispositivos móviles de baja potencia, cargar después de que la página sea interactiva
+            window.addEventListener('load', () => {
+                setTimeout(() => {
+                    loadScript('src/js/app.js');
+                }, 100);
+            });
+        } else {
+            // En dispositivos más potentes, cargar tan pronto como sea posible
+            loadScript('src/js/app.js');
+        }
+        
+        // Habilitar Service Worker para caché y rendimiento offline
+        if ('serviceWorker' in navigator && !isMobile && !isLowPower) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js').catch(error => {
+                    console.log('SW registration failed:', error);
+                });
+            });
+        }
+    </script>
 </body>
 </html>
